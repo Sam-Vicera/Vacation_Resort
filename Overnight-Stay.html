@@ -1,0 +1,118 @@
+<!-- this page will help guests plan their stay based on parameters such as:
+Name and email:
+check in date:
+Number of nights staying: 1-28
+room type (use radio buttons that specify Queen, King, 2-Bedroom Suite)
+number of adults and children 1-4 ; 0-4 respectively
+discounts (radio buttons) none, AAA/Senior 10 percent and Military 20%
+
+Important things to note: room must be able to support the amount of people displayed by the user
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bahamas Resort</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body id="homePage">
+    <header>
+      <nav
+        class="navbar navbar-expand-lg bg-secondary-subtle"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Bahamas Paradise</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor01"
+            aria-controls="navbarColor01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html"
+                  >Home
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Overnight-Stay.html">Overnight Stay</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dining Options</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Dropdown</a
+                >
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+       
+        <fieldset class="container">
+            <legend> <h1>Fill out the Form below to get you the best possible deal</h1></legend>
+            
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1" class="form-label mt-4">Full Name</label>
+              <input type="text" class="form-control" id="fullNameInput" placeholder="Full Name" autocomplete="off">
+            </div>
+            
+            <div class="form-group">
+              <label for="exampleInputPassword1" class="form-label mt-4">Check-In Date</label>
+              <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
+            </div>
+      </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
