@@ -45,7 +45,9 @@ Important things to note: room must be able to support the amount of people disp
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Overnight-Stay.html">Overnight Stay</a>
+                <a class="nav-link" href="Overnight-Stay.html"
+                  >Overnight Stay</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Dining Options</a>
@@ -78,30 +80,223 @@ Important things to note: room must be able to support the amount of people disp
     </header>
     <main>
       <section>
-       
-        <fieldset class="container">
-            <legend> <h1>Fill out the Form below to get you the best possible deal</h1></legend>
-            
-            <div class="form-group">
-              <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1" class="form-label mt-4">Full Name</label>
-              <input type="text" class="form-control" id="fullNameInput" placeholder="Full Name" autocomplete="off">
-            </div>
-            
-            <div class="form-group">
-              <label for="exampleInputPassword1" class="form-label mt-4">Check-In Date</label>
-              <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
-            </div>
+        <form class="container" id="formInfo">
+          <legend>
+            <h1>Fill out the Form below to get you the best possible deal!</h1>
+          </legend>
+
+          <div class="form-group">
+            <label for="emailInput" class="form-label mt-4"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="emailInput"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your email with anyone else.</small
+            >
+          </div>
+          <div class="form-group">
+            <label for="fullNameInput" class="form-label mt-4"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="fullNameInput"
+              placeholder="Full Name"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="dateTime" class="form-label mt-4">Check-In Date</label>
+            <input
+              type="datetime-local"
+              class="form-control"
+              id="dateTime"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-group">
+            <label for="numberOfNights" class="form-label mt-4"
+              >Number of Nights with Us (1-28 Nights)</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="numberOfNights"
+              min="1"
+              max="28"
+            />
+          </div>
+          <legend class="mt-4">
+            What type of room would you like?
+            <h6>Please choose a room that accomadates your party.</h6>
+          </legend>
+
+          <div class="form-check mt-4">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="roomType"
+              id="queenRoom"
+              value="queenRoom"
+              checked
+            />
+            <label class="form-check-label" for="queenRoom"> Queen </label>
+          </div>
+
+          <div class="form-check mt-4">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="roomType"
+              id="kingRoom"
+              value="kingRoom"
+            />
+            <label class="form-check-label" for="kingRoom"> King </label>
+          </div>
+
+          <div class="form-check mt-4">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="roomType"
+              id="bedroomSuite"
+              value="bedroomSuite"
+            />
+            <label class="form-check-label" for="bedroomSuite">
+              2-Bedroom Suite
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="numberOfAdults" class="form-label mt-4"
+              >Number of adults that will be staying in the room(1-4)</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="numberOfAdults"
+              min="1"
+              max="4"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="numberOfChildren" class="form-label mt-4"
+              >Number of children(0-4) that will be staying in the
+              room(0-4)</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="numberOfChildren"
+              min="0"
+              max="4"
+            />
+          </div>
+
+          <legend class="mt-4">Possible discounts</legend>
+          <div class="form-check mt-4">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="discounts"
+              id="noDiscount"
+              value="none"
+              checked
+            />
+            <label class="form-check-label" for="noDiscount"> None </label>
+          </div>
+          <div class="form-check mt-4">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="discounts"
+              id="seniorDiscount"
+              value="seniorDiscount"
+            />
+            <label class="form-check-label" for="seniorDiscount">
+              AAA/Senior 10% Off
+            </label>
+          </div>
+          <div class="form-check mt-4">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="discounts"
+              id="militaryDiscount"
+              value="militaryDiscount"
+            />
+            <label class="form-check-label" for="militaryDiscount">
+              Military 20% Off
+            </label>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-outline-dark mt-4"
+            id="submitButton"
+          >
+            Submit
+          </button>
+        </form>
+      </section>
+
+      <section class="container mt-3 pt-4 border-top" id="receipt">
+        <h1>Receipt Details</h1>
+        <div>Name: <span id="nameDisplay"></span></div>
+        <div>Email: <span id="emailDisplay"></span></div>
+        <div>Check-in Date: <span id="checkInDateDisplay"></span></div>
+        <div>Number of Nights: <span id="numberOfNightsDisplay"></span></div>
+        <div>Number of Adults: <span id="numberOfAdultsDisplay"></span></div>
+        <div>
+          Number of Children: <span id="numberOfChildrenDisplay"></span>
+        </div>
+        <div>Total People <span id="numberOfPeopleDisplay"></span></div>
+        <table class="table table-hover mt-3">
+          <thead class="thead-light">
+            <tr>
+              <th class="bg-dark text-light">Option</th>
+              <th class="bg-secondary text-light">Cost</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="w-75 text-end pr-5">
+             Your Room:
+              <span id="roomTypeDisplay">
+            </td>
+            <td id="queenPriceCell">$0</td>
+          </tr>
+          <tr>
+            <td class="w-75 text-end pr-5">
+              Number of Nights:
+              <span id="roomTypeKingDisplay"></span>
+            </td>
+            <td id="kingPriceCell">$0</td>
+          </tr>
+          <tr>
+            <td class="w-75 text-end pr-5">
+              Check-In Date: 
+              <span id="roomTypeQueenDisplay"></span>
+            </td>
+            <td id="twoBedroomPriceCell">$0</td>
+          </tr>
+
+          <tr class="table-warning">
+            <th class="w-75 text-end pr-5">Total</th>
+            <th id="totalPriceDisplay">$0</th>
+          </tr>
+        </table>
       </section>
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -114,5 +309,7 @@ Important things to note: room must be able to support the amount of people disp
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script src="scripts/overnight-Stay.js"></script>
   </body>
 </html>
